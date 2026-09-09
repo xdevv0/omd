@@ -18,10 +18,10 @@
             justify-content: center;
             align-items: center;
             padding: 20px;
-            position: relative; /* لجعل التموضع المطلق للأيقونات منسوباً للصفحة كاملة */
+            position: relative; /* لجعل التموضع المطلق للعناصر منسوباً للصفحة كاملة */
         }
 
-        /* تنسيق الأيقونات لتكون في زاوية الصفحة العلوية اليسرى */
+        /* أيقونات التواصل في الزاوية العلوية اليسرى (باللون الأبيض تماماً مثل سيناريو) */
         .page-social-icons {
             position: absolute;
             top: 25px;
@@ -34,27 +34,46 @@
         .page-icon-btn {
             width: 42px;
             height: 42px;
-            background: #10161c;
-            border: 1px solid rgba(179, 162, 134, 0.3);
-            border-radius: 50%;
+            background: transparent; /* خلفية شفافة تماماً مثل سيناريو */
+            border: none;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #d1c7b7;
+            color: #ffffff; /* لون أبيض ناصع للأيقونة */
             text-decoration: none;
             font-size: 20px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
         }
 
         .page-icon-btn:hover {
-            transform: translateY(-3px);
-            border-color: #b3a286;
-            background: #1b232b;
+            transform: translateY(-2px);
+            opacity: 0.8;
         }
 
-        .page-icon-btn.whatsapp:hover { color: #25D366; border-color: #25D366; }
-        .page-icon-btn.instagram:hover { color: #E1306C; border-color: #E1306C; }
+        /* اسم الماركة وشعارها في الزاوية العلوية اليمنى */
+        .top-brand-title {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 10;
+            text-decoration: none;
+            color: #d8cbb8;
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+
+        .top-brand-logo {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1px solid #b3a286;
+            object-fit: cover;
+        }
 
         .card-container {
             width: 100%;
@@ -133,7 +152,7 @@
             background: #1b232b;
         }
 
-        /* تخصيص تأثيرات الأيقونات عند التحويم */
+        /* تخصيص تأثيرات الأيقونات عند التحويم داخل الأزرار */
         .link-btn.whatsapp:hover { border-color: #25D366; background: rgba(37, 211, 102, 0.1); }
         .link-btn.instagram:hover { border-color: #E1306C; background: rgba(225, 48, 108, 0.1); }
 
@@ -167,7 +186,7 @@
 </head>
 <body>
 
-    <!-- أيقونات التواصل في زاوية الصفحة العلوية اليسرى -->
+    <!-- أيقونات التواصل في زاوية الصفحة العلوية اليسرى (أبيض بالكامل بدون حدود أو خلفيات) -->
     <div class="page-social-icons">
         <a href="https://wa.me/970592700870" class="page-icon-btn whatsapp" target="_blank" title="WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
@@ -175,6 +194,12 @@
         <a href="https://www.instagram.com/omd.ps?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" class="page-icon-btn instagram" target="_blank" title="Instagram">
             <i class="fa-brands fa-instagram"></i>
         </a>
+    </div>
+
+    <!-- اسم الماركة وشعارها في الزاوية العلوية اليمنى -->
+    <div class="top-brand-title">
+        <span>O.M.D</span>
+        <img src="omd.jpg" alt="O.M.D" class="top-brand-logo">
     </div>
 
     <div class="card-container">
