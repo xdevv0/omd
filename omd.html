@@ -29,12 +29,47 @@
             padding: 35px 20px;
             text-align: center;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(179, 162, 134, 0.05);
+            position: relative; /* لتمكين التموضع المطلق للأيقونات العلوية */
         }
+
+        /* تنسيق الأيقونات العلوية (فوق على اليسار) */
+        .top-social-icons {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .top-icon-btn {
+            width: 38px;
+            height: 38px;
+            background: #151c23;
+            border: 1px solid rgba(179, 162, 134, 0.3);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #d1c7b7;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+        }
+
+        .top-icon-btn:hover {
+            transform: translateY(-2px);
+            border-color: #b3a286;
+            background: #1b232b;
+        }
+
+        .top-icon-btn.whatsapp:hover { color: #25D366; border-color: #25D366; }
+        .top-icon-btn.instagram:hover { color: #E1306C; border-color: #E1306C; }
 
         .logo-container {
             width: 130px;
             height: 130px;
-            margin: 0 auto 15px auto;
+            margin: 10px auto 15px auto; /* إضافة مساحة علوية صغيرة لتبتعد عن الأيقونات */
             border-radius: 50%;
             overflow: hidden;
             border: 2px solid #b3a286;
@@ -132,6 +167,16 @@
 <body>
 
     <div class="card-container">
+        <!-- أيقونات التواصل في أعلى اليسار -->
+        <div class="top-social-icons">
+            <a href="https://wa.me/970592700870" class="top-icon-btn whatsapp" target="_blank" title="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/omd.ps?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" class="top-icon-btn instagram" target="_blank" title="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+
         <!-- شعار الماركة -->
         <div class="logo-container">
             <img src="omd.jpg" alt="O.M.D Perfumes" id="c-logo">
