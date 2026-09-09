@@ -18,42 +18,36 @@
             justify-content: center;
             align-items: center;
             padding: 20px;
-            position: relative; /* لجعل التموضع المطلق للعناصر منسوباً للصفحة كاملة */
+            position: relative;
         }
 
-        /* أيقونات التواصل في الزاوية العلوية اليسرى (باللون الأبيض تماماً مثل سيناريو) */
+        /* تنسيق الأيقونات العلوية لتكون مطابقة لسيناريو تماماً (أبيض ومتباعدة قليلاً بدون خلفيات أو حدود) */
         .page-social-icons {
             position: absolute;
             top: 25px;
             left: 25px;
             display: flex;
-            gap: 12px;
+            gap: 18px;
             z-index: 10;
         }
 
         .page-icon-btn {
-            width: 42px;
-            height: 42px;
-            background: transparent; /* خلفية شفافة تماماً مثل سيناريو */
+            background: none;
             border: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #ffffff; /* لون أبيض ناصع للأيقونة */
+            color: #ffffff; /* لون أبيض ناصع تماماً */
             text-decoration: none;
             font-size: 20px;
-            transition: all 0.3s ease;
+            transition: opacity 0.3s ease;
         }
 
         .page-icon-btn:hover {
-            transform: translateY(-2px);
-            opacity: 0.8;
+            opacity: 0.7;
         }
 
         /* اسم الماركة وشعارها في الزاوية العلوية اليمنى */
         .top-brand-title {
             position: absolute;
-            top: 25px;
+            top: 22px;
             right: 25px;
             display: flex;
             align-items: center;
@@ -186,7 +180,7 @@
 </head>
 <body>
 
-    <!-- أيقونات التواصل في زاوية الصفحة العلوية اليسرى (أبيض بالكامل بدون حدود أو خلفيات) -->
+    <!-- أيقونات التواصل في زاوية الصفحة العلوية اليسرى (أبيض بالكامل بدون خلفية مثل سيناريو) -->
     <div class="page-social-icons">
         <a href="https://wa.me/970592700870" class="page-icon-btn whatsapp" target="_blank" title="WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
